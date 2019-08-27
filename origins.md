@@ -1,16 +1,14 @@
 #### 项目的目的是什么? 
 
-从Go语言诞生到现在虽然只有十来年，但是编程时间和当初早已不相同。在十几年前，生产软件通常是用C++或者Java语言编写，那时候Github还不存在，大多数计算机还没有多处理器，除了Visual Studio和Eclipse几乎没有其他可用的ide或高级工具，更不用说在互联网上免费试用的。
+从Go语言诞生到现在虽然只有十来年，但是编程世界和当初早已不相同。在十几年前，生产软件通常是用C++或者Java语言编写，那时候Github还不存在，大多数计算机还没有多处理器，除了Visual Studio和Eclipse几乎没有其他可用的ide或高级工具，更不用说在互联网上免费使用的。
 
 与此同时，我们开发服务器软件所用的编程语言复杂度越来越高。自从C、C++和Java语言被首次开发出来，计算机的运行速度已经有了非常大的提高，但是实际上编程语言却没有变的更加高级。此外，很明显的是多处理器正在变的越来越普遍，但是大多数编程语言在效率和安全方面并没有提供进一步的帮助。
 
-我们决定退一步来思考问题，随着技术的发展，软件工程在未来将会面临哪些主要问题，以及一种新的语言将如何人来帮助解决这些问题。例如，多核处理器的兴起表明，新的编程语言应该为某些并发或者并行提供一流的支持。为了在大型并发程序中更加容易的管理资源，编程语言需要垃圾收集或者至少某种安全的自动内存管理。
+我们决定退一步来思考问题，随着技术的发展，软件工程在未来将会面临哪些主要问题，以及一种新的语言将如何来帮助解决这些问题。例如，多核处理器的兴起表明，新的编程语言应该为某些并发或者并行提供一流的支持。为了在大型并发程序中更加容易的管理资源，编程语言需要垃圾收集或者至少某种安全的自动内存管理。
 
-These considerations led to [a series of discussions](https://commandcenter.blogspot.com/2017/09/go-ten-years-and-climbing.html) from which Go arose, first as a set of ideas and desiderata, then as a language. An overarching goal was that Go do more to help the working programmer by enabling tooling, automating mundane tasks such as code formatting, and removing obstacles to working on large code bases.
+这些考虑导致了一系列的[讨论](https://commandcenter.blogspot.com/2017/09/go-ten-years-and-climbing.html)，Go首先作为一些列想法和愿望出现，然后才是作为语言出现。一个首要的的目标就是希望Go通过启用工具、自动执行常见任务(例如代码格式化)在大型代码库上消除一些障碍，从而为编人员提供更多的帮助。
 
-这些考虑导致了一系列的[讨论](https://commandcenter.blogspot.com/2017/09/go-ten-years-and-climbing.html)，Go首先作为一些列想法和愿望出现，然后才是作为语言出现。一个首要的的目标就是希望Go通过启用工具、自动执行常见任务(例如代码格式化)在大型代码库上消除一些障碍，从而为正在工作的编程人员提供更多的帮助。
-
-这里有一篇文章，对GO的目标以及如何来实现这些目标进行了更加广泛的描述： [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
+这里有一篇文章，对Go的目标以及如何来实现这些目标进行了更加广泛的描述： [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
 
 #### What is the history of the project? 
 
