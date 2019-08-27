@@ -1,14 +1,16 @@
-#### What is the purpose of the project? 
+#### 项目的目的是什么? 
 
-At the time of Go's inception, only a decade ago, the programming world was different from today. Production software was usually written in C++ or Java, GitHub did not exist, most computers were not yet multiprocessors, and other than Visual Studio and Eclipse there were few IDEs or other high-level tools available at all, let alone for free on the Internet.
+从Go语言诞生到现在虽然只有十来年，但是编程时间和当初早已不相同。在十几年前，生产软件通常是用C++或者Java语言编写，那时候Github还不存在，大多数计算机还没有多处理器，除了Visual Studio和Eclipse几乎没有其他可用的ide或高级工具，更不用说在互联网上免费试用的。
 
-Meanwhile, we had become frustrated by the undue complexity required to use the languages we worked with to develop server software. Computers had become enormously quicker since languages such as C, C++ and Java were first developed but the act of programming had not itself advanced nearly as much. Also, it was clear that multiprocessors were becoming universal but most languages offered little help to program them efficiently and safely.
+与此同时，我们开发服务器软件所用的编程语言复杂度越来越高。自从C、C++和Java语言被首次开发出来，计算机的运行速度已经有了非常大的提高，但是实际上编程语言却没有变的更加高级。此外，很明显的是多处理器正在变的越来越普遍，但是大多数编程语言在效率和安全方面并没有提供进一步的帮助。
 
-We decided to take a step back and think about what major issues were going to dominate software engineering in the years ahead as technology developed, and how a new language might help address them. For instance, the rise of multicore CPUs argued that a language should provide first-class support for some sort of concurrency or parallelism. And to make resource management tractable in a large concurrent program, garbage collection, or at least some sort of safe automatic memory management was required.
+我们决定退一步来思考问题，随着技术的发展，软件工程在未来将会面临哪些主要问题，以及一种新的语言将如何人来帮助解决这些问题。例如，多核处理器的兴起表明，新的编程语言应该为某些并发或者并行提供一流的支持。为了在大型并发程序中更加容易的管理资源，编程语言需要垃圾收集或者至少某种安全的自动内存管理。
 
 These considerations led to [a series of discussions](https://commandcenter.blogspot.com/2017/09/go-ten-years-and-climbing.html) from which Go arose, first as a set of ideas and desiderata, then as a language. An overarching goal was that Go do more to help the working programmer by enabling tooling, automating mundane tasks such as code formatting, and removing obstacles to working on large code bases.
 
-A much more expansive description of the goals of Go and how they are met, or at least approached, is available in the article, [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
+这些考虑导致了一系列的[讨论](https://commandcenter.blogspot.com/2017/09/go-ten-years-and-climbing.html)，Go首先作为一些列想法和愿望出现，然后才是作为语言出现。一个首要的的目标就是希望Go通过启用工具、自动执行常见任务(例如代码格式化)在大型代码库上消除一些障碍，从而为正在工作的编程人员提供更多的帮助。
+
+这里有一篇文章，对GO的目标以及如何来实现这些目标进行了更加广泛的描述： [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
 
 #### What is the history of the project? 
 
@@ -18,17 +20,21 @@ Go became a public open source project on November 10, 2009. Countless people fr
 
 There are now millions of Go programmers—gophers—around the world, and there are more every day. Go's success has far exceeded our expectations.
 
-#### What's the origin of the gopher mascot?
+#### 这是项目的历史是什么？
 
-The mascot and logo were designed by [Renée French](https://reneefrench.blogspot.com/), who also designed [Glenda](https://9p.io/plan9/glenda.html), the Plan 9 bunny. A [blog post](https://blog.golang.org/gopher)about the gopher explains how it was derived from one she used for a [WFMU](https://wfmu.org/) T-shirt design some years ago. The logo and mascot are covered by the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license.
+Robert Griesemer, Rob Pike和Ken Thompson从2007年9月21日开始在白板上为新的编程语言勾画目标。
 
-The gopher has a [model sheet](https://golang.org/doc/gopher/modelsheet.jpg) illustrating his characteristics and how to represent them correctly. The model sheet was first shown in a [talk](https://www.youtube.com/watch?v=4rw_B4yY69k) by Renée at Gophercon in 2016. He has unique features; he's the *Go gopher*, not just any old gopher.
+#### gopher吉祥物的起源是什么？
 
-#### Is the language called Go or Golang?
+吉祥物和logo是由[Renée French](https://reneefrench.blogspot.com/)设计，他也是[Glenda](https://9p.io/plan9/glenda.html), the Plan 9 bunny的设计者。有一篇关于gopher的[博客文章](https://blog.golang.org/gopher)解释了她是如何从几年前她使用过的[WFMU](https://wfmu.org/) t恤设计中获得的有关吉祥物和logo的设计灵感。标识和吉祥物遵守 [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/)许可协议。
 
-The language is called Go. The "golang" moniker arose because the web site is [golang.org](https://golang.org/), not go.org, which was not available to us. Many use the golang name, though, and it is handy as a label. For instance, the Twitter tag for the language is "#golang". The language's name is just plain Go, regardless.
+Gopher有一个[人物设计](https://golang.org/doc/gopher/modelsheet.jpg)表来说明它的特点和如何正确的表示它们。2016年，Renee在Gophercon的一次演讲中首次展示了改人物设计。它是一个独特的Go gopher，而不是普通的老gopher.
 
-A side note: Although the [official logo](https://blog.golang.org/go-brand) has two capital letters, the language name is written Go, not GO.
+#### 这个编程语言叫Go还是Golang?
+
+这个编程语言叫做Go. "golang"这个名字的出现是因为网站是[golang.org](https://golang.org/),而不是go.org，go.org我们是无法访问的。更多的时候大家把golang这个名字作为一个方便使用的标签。例如，在Twitter上这个语言的的标签是#golang。不管怎么样，这个编程语言的名字就叫做Go.
+
+一个边注：尽管[官方logo](https://blog.golang.org/go-brand)是两个大写字母，但是这个编程语言的名字就叫做Go,而不是GO.
 
 #### Why did you create a new language?
 
