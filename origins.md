@@ -10,17 +10,15 @@
 
 这里有一篇文章，对Go的目标以及如何来实现这些目标进行了更加广泛的描述： [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
 
-#### What is the history of the project? 
 
-Robert Griesemer, Rob Pike and Ken Thompson started sketching the goals for a new language on the white board on September 21, 2007. Within a few days the goals had settled into a plan to do something and a fair idea of what it would be. Design continued part-time in parallel with unrelated work. By January 2008, Ken had started work on a compiler with which to explore ideas; it generated C code as its output. By mid-year the language had become a full-time project and had settled enough to attempt a production compiler. In May 2008, Ian Taylor independently started on a GCC front end for Go using the draft specification. Russ Cox joined in late 2008 and helped move the language and libraries from prototype to reality.
 
-Go became a public open source project on November 10, 2009. Countless people from the community have contributed ideas, discussions, and code.
+#### 项目的历史是什么？
 
-There are now millions of Go programmers—gophers—around the world, and there are more every day. Go's success has far exceeded our expectations.
+Robert Griesemer, Rob Pike和Ken Thompson于2007年9月21日开始在白板上勾画新编程语言的目标。在几天之内，这些目标就落实形成了一个去实现这些目标的计划以及它将会是什么的一个公平的想法。设计工作在进行的同时兼职一些其他不相关的工作。到2008年1月，Ken Thompson已经开始着手设计一个输出结果为C语言的编译器，用以探索思路。到了年中，这个项目已经成为了全职项目，并且有充足准备来开发其编译器。在2008年5月，Ian Taylor独立开发了一个符合Go草案的GCC的前端。后半年加入的Russ Cox，通过原型开始实现Go的语言规则及一些基础库。
 
-#### 这是项目的历史是什么？
+在2009年11月10日，Go成为了一个开源项目。来自开源社区无数的人贡献着他们的想法、讨论和代码。
 
-Robert Griesemer, Rob Pike和Ken Thompson从2007年9月21日开始在白板上为新的编程语言勾画目标。
+现在已经有着来自全球数百万的Go语言使用者-gopher，并且人数每天都在增长着。Go的成功远远超过了我们的语气
 
 #### gopher吉祥物的起源是什么？
 
@@ -34,24 +32,24 @@ Gopher有一个[人物设计](https://golang.org/doc/gopher/modelsheet.jpg)表�
 
 一个边注：尽管[官方logo](https://blog.golang.org/go-brand)是两个大写字母，但是这个编程语言的名字就叫做Go,而不是GO.
 
-#### Why did you create a new language?
+#### 为什么要创造一门新的编程语言？
 
-Go was born out of frustration with existing languages and environments for the work we were doing at Google. Programming had become too difficult and the choice of languages was partly to blame. One had to choose either efficient compilation, efficient execution, or ease of programming; all three were not available in the same mainstream language. Programmers who could were choosing ease over safety and efficiency by moving to dynamically typed languages such as Python and JavaScript rather than C++ or, to a lesser extent, Java.
+Go之所以诞生，是对Google现有编程语言和编程环境不满的一种驱动使然。编程变的越来越困难，并且在语言的选择上变的迷茫。编译效率、运行效率和语言的易用性在同一个主流的语言上是不可同时兼得的。开发者倾向选择诸如Python和 JavaScript这类易于开发的动态类型语言，而不是C++、Java这类更加安全和有执行效率的语言。
 
-We were not alone in our concerns. After many years with a pretty quiet landscape for programming languages, Go was among the first of several new languages—Rust, Elixir, Swift, and more—that have made programming language development an active, almost mainstream field again.
+并非只有我们有这样的担忧。多年来，编程语言领域一片宁静，而仅Go是Rust, Elixir, Swift等新语言中的一个，他们使编程语言开发在主流领域里再次活跃起来。
 
-Go addressed these issues by attempting to combine the ease of programming of an interpreted, dynamically typed language with the efficiency and safety of a statically typed, compiled language. It also aimed to be modern, with support for networked and multicore computing. Finally, working with Go is intended to be *fast*: it should take at most a few seconds to build a large executable on a single computer. To meet these goals required addressing a number of linguistic issues: an expressive but lightweight type system; concurrency and garbage collection; rigid dependency specification; and so on. These cannot be addressed well by libraries or tools; a new language was called for.
+Go尝试将解释型、动态型语言的易用性和静态、编译型语言的效率、安全结合起来。它的目标是将Go打造成支持网络以及多核编程的现代化编程语言。最后，希望Go是快速的：它应该在单台机器上最多需要几秒钟的时间完成一个大型工程的编译工作。要达成这样的目标还需要解决大量这样的问题：一个有表达力并且轻量的类型系统；并发和垃圾收集；严格的依赖规范等等。现有的库或者工具并不能很好的解决这些问题，因此一个新的语言应运而生。
 
-The article [Go at Google](https://talks.golang.org/2012/splash.article) discusses the background and motivation behind the design of the Go language, as well as providing more detail about many of the answers presented in this FAQ.
+[Go at Google](https://talks.golang.org/2012/splash.article) 这篇文章讨论了Go语言诞生的背景以及动机，回答了更多在本篇FAQ中问题的细节。
 
-#### What are Go's ancestors?
+#### Go的原型是什么？
 
-Go is mostly in the C family (basic syntax), with significant input from the Pascal/Modula/Oberon family (declarations, packages), plus some ideas from languages inspired by Tony Hoare's CSP, such as Newsqueak and Limbo (concurrency). However, it is a new language across the board. In every respect the language was designed by thinking about what programmers do and how to make programming, at least the kind of programming we do, more effective, which means more fun.
+Go很大程度上属于C家族(基础语法)，参考并吸收了Pascal/Modula/Oberon这些语言的优点(declarations, packages)，再结合来自其他像Newsqueak和Limbo语言Tony Hoare的CSP理论。然而它是一门全新的编程语言。每一个被认可的语言在设计的时候都要考虑到开发者可以做什么以及怎么做，至少我们创造的语言应该更叫有效率，这也意味着更加的有乐趣。
 
-### What are the guiding principles in the design?
+#### 设计的指导原则是什么？
 
-When Go was designed, Java and C++ were the most commonly used languages for writing servers, at least at Google. We felt that these languages required too much bookkeeping and repetition. Some programmers reacted by moving towards more dynamic, fluid languages like Python, at the cost of efficiency and type safety. We felt it should be possible to have the efficiency, the safety, and the fluidity in a single language.
+Go在设计的时候，在Google内部，Java和C++语言是服务端领域应用最多的语言。我们感觉到这些语言包含了太多的记账和重复性的工作。一些开发者倾向使用像Python这类牺牲效率和类型安全的动态语言。我们认为新的语言应该尽可能做到高效、类型安全和流畅。
 
-Go attempts to reduce the amount of typing in both senses of the word. Throughout its design, we have tried to reduce clutter and complexity. There are no forward declarations and no header files; everything is declared exactly once. Initialization is expressive, automatic, and easy to use. Syntax is clean and light on keywords. Stuttering (`foo.Foo* myFoo = new(foo.Foo)`) is reduced by simple type derivation using the `:=` declare-and-initialize construct. And perhaps most radically, there is no type hierarchy: types just *are*, they don't have to announce their relationships. These simplifications allow Go to be expressive yet comprehensible without sacrificing, well, sophistication.
+Go尝试减少输入的代码数量。透过它的设计, 我们尝试减少混乱和复杂度。在Go中没有前置声明和头文件；所有对象、变量都只声明一次。初始化是简洁、自动而且易用的。语法干净, 关键字轻量。使用 `:=`声明并定义的方式来简化类似`foo.Foo* myFoo = new(foo.Foo)`这样的表达方式。而最基本的，Go的类型系统是没有层级结构的，这样也就不用去声明他们之间的关系。这种简化机制使得Go变的富有表达力和容易理解。
 
-Another important principle is to keep the concepts orthogonal. Methods can be implemented for any type; structures represent data while interfaces represent abstraction; and so on. Orthogonality makes it easier to understand what happens when things combine.
+另外一个重要的原则就是概念正交。一个方法可以被任何类型来实现；结构体表示数据而接口用来表示抽象等等。正交性使得操作组合时更容易理解其中发生了什么。
