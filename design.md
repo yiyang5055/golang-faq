@@ -16,9 +16,9 @@ For the time being, we have a simple rule that can be expanded later without bre
 
 ### 为什么Go没有feature X?
 
-Every language contains novel features and omits someone's favorite feature. Go was designed with an eye on felicity of programming, speed of compilation, orthogonality of concepts, and the need to support features such as concurrency and garbage collection. Your favorite feature may be missing because it doesn't fit, because it affects compilation speed or clarity of design, or because it would make the fundamental system model too difficult.
+每个语言都包含了一些新颖的特性并且忽略了一些人喜欢的特性。Go被设计成便于阅读，快速编译，概念正交，而且还需要支持并发性和垃圾收集这样的特性。你喜欢的特性被遗漏因为它不合适，因为它影响了编译速度或者设计的清晰，或者因为它使得基础系统模型变的复杂。
 
-If it bothers you that Go is missing feature X, please forgive us and investigate the features that Go does have. You might find that they compensate in interesting ways for the lack of X.
+如果遗漏的某些特性给你带来了不便，请原谅我们并且研究Go已经支持的特性，你可能会发现补偿你确实某些特性的乐趣。
 
 ### 为什么Go没有泛型？
 
