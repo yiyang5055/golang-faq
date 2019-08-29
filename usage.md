@@ -10,9 +10,7 @@ Go不仅仅是在Google内部作为一门编程语言，绝非这样，它包括
 
 Go的使用在全球范围内都在增长，尤其是在云计算领域，但绝不仅仅于此，比如Docker和Kubernetes两个云计算基础设施项目都是用Go写的，而且还有更多其他的项目。
 
-然而，不仅仅是在云计算。Go的[Wiki](https://github.com/golang/go/wiki/GoUsers)有一个经常更新的页面,这里面就列出了一些使用Go的公司。
-
-Wiki上还有一个[页面](https://github.com/golang/go/wiki/SuccessStories),上面有很多成功使用Go的公司和项目的故事。
+然而，不仅仅是在云计算。Go的[Wiki](https://github.com/golang/go/wiki/GoUsers)有一个经常更新的页面,这里面就列出了一些使用Go的公司。还有一个[页面](https://github.com/golang/go/wiki/SuccessStories),上面有很多成功使用Go的公司和项目的故事。
 
 ### Go如何链接C/C++代码？
 
