@@ -8,17 +8,13 @@
 
 这些考虑导致了一系列的[讨论](https://commandcenter.blogspot.com/2017/09/go-ten-years-and-climbing.html)，Go首先作为一些列想法和愿望出现，然后才是作为语言出现。一个首要的的目标就是希望Go通过启用工具、自动执行常见任务(例如代码格式化)在大型代码库上消除一些障碍，从而为编人员提供更多的帮助。
 
-这里有一篇文章，对Go的目标以及如何来实现这些目标进行了更加广泛的描述： [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
-
-
+这里有一篇文章，对Go的目标以及如何来实现这些目标进行了更加广泛的描述: [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article).
 
 #### 项目的历史是什么？
 
 Robert Griesemer, Rob Pike和Ken Thompson于2007年9月21日开始在白板上勾画新编程语言的目标。在几天之内，这些目标就落实形成了一个去实现这些目标的计划以及它将会是什么的一个公平的想法。设计工作在进行的同时兼职一些其他不相关的工作。到2008年1月，Ken Thompson已经开始着手设计一个输出结果为C语言的编译器，用以探索思路。到了年中，这个项目已经成为了全职项目，并且有充足准备来开发其编译器。在2008年5月，Ian Taylor独立开发了一个符合Go草案的GCC的前端。后半年加入的Russ Cox，通过原型开始实现Go的语言规则及一些基础库。
 
-在2009年11月10日，Go成为了一个开源项目。来自开源社区无数的人贡献着他们的想法、讨论和代码。
-
-现在已经有着来自全球数百万的Go语言使用者-gopher，并且人数每天都在增长着。Go的成功远远超过了我们的语气
+在2009年11月10日，Go成为了一个开源项目。来自开源社区无数的人贡献着他们的想法、讨论和代码。现在已经有着来自全球数百万的Go语言使用者，并且人数每天都在增长着。Go的成功远远超过了我们的预期。
 
 #### gopher吉祥物的起源是什么？
 
