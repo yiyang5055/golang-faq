@@ -7,7 +7,7 @@
 * [类型](./types.md)
 * [值](./values.md)
 * [编码](./writing_code.md)
-* [指正和分配](pointers_and_allocation.md)
+* [指针和分配](pointers_and_allocation.md)
 * [并发](concurrency.md)
 * [函数和方法](functions_and_methods.md)
 * [控制流](control_flow.md)
