@@ -1,6 +1,6 @@
-### Why does Go not have the `?:` operator?
+### 为什么Go没有`?:`运算符?
 
-There is no ternary testing operation in Go. You may use the following to achieve the same result:
+Go中没有三元运算符，你可以按照下面的代码也可以实现相同的效果:
 
 ```go
 if expr {
@@ -9,5 +9,4 @@ if expr {
     n = falseVal
 }
 ```
-
-The reason `?:` is absent from Go is that the language's designers had seen the operation used too often to create impenetrably complex expressions. The `if-else` form, although longer, is unquestionably clearer. A language needs only one conditional control flow construct.
+Go中没有`?:`运算符的原因是Go语言的设计者看到三元运算符经常被用来实现复杂的表达式。虽然`if-else`这样的形式代码更多，但是逻辑清晰。一种语言只需要一个条件控制流。
